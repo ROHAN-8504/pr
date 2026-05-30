@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Problems Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-title {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            margin: 15px 0;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "▸";
+            color: #667eea;
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .content {
+            color: #555;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        .constraints-list {
+            padding-left: 20px;
+        }
+
+        .constraints-list li {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .code-block {
+            background: #f4f4f4;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            overflow-x: auto;
+        }
+
+        .output-block {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .problem-number {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Programming Problems Collection</h1>
+
+        <!-- Problem 1 -->
+        <div class="problem-card">
+            <h2 class="problem-title"><span class="problem-number">1</span>Attendance Eligibility Engine</h2>
+
+            <div class="section">
+                <div class="section-title">Problem</div>
+                <div class="content">
+                    A college system stores student name, attendance percentage, and class status. Build a rule-based checker that prints whether the student can enter the exam hall and also whether they need a warning message.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Constraints</div>
+                <ul class="constraints-list">
+                    <li>Attendance is an integer from 0 to 100</li>
+                    <li>If attendance is below 75, student is not eligible</li>
+                    <li>If attendance is between 75 and 79, show "Eligible with Warning"</li>
+                    <li>If attendance is 80 or above, show "Eligible"</li>
+                    <li>Use variables and conditions only</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Sample Input</div>
+                <div class="code-block">
+Name: Kavya
+Attendance: 78
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Expected Output</div>
+                <div class="output-block">
+Student Name: Kavya
+Attendance: 78%
+Status: Eligible with Warning
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="problem-card">
+            <h2 class="problem-title"><span class="problem-number">2</span>Dynamic Cart Analyzer</h2>
+
+            <div class="section">
+                <div class="section-title">Problem</div>
+                <div class="content">
+                    An online store keeps product prices in an array. Write a program to calculate total bill, highest item price, and final amount after discount rules.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Constraints</div>
+                <ul class="constraints-list">
+                    <li>Array must contain at least 5 prices</li>
+                    <li>If total is above 5000, apply 12% discount</li>
+                    <li>If total is above 8000, apply 20% discount</li>
+                    <li>Use array processing and conditions</li>
+                    <li>Print total, max item price, discount, and final payable amount</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Sample Input</div>
+                <div class="code-block">
+[1200, 2300, 900, 1800, 700]
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Expected Output</div>
+                <div class="output-block">
+Total Amount: 6900
+Highest Item Price: 2300
+Discount: 828
+Final Amount: 6072
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="problem-card">
+            <h2 class="problem-title"><span class="problem-number">3</span>Inventory Priority Report</h2>
+
+            <div class="section">
+                <div class="section-title">Problem</div>
+                <div class="content">
+                    A warehouse stores products as objects with name, price, stock, and category. Show only low-stock items and sort them by price in descending order.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Constraints</div>
+                <ul class="constraints-list">
+                    <li>Each product should have 4 fields</li>
+                    <li>Low stock means stock less than 10</li>
+                    <li>Use filter() and sort()</li>
+                    <li>Sort by price from high to low</li>
+                    <li>Output must show product name, category, and stock</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Sample Input</div>
+                <div class="code-block">
+[
+  { name: "Printer", price: 14000, stock: 4, category: "Office" },
+  { name: "Mouse", price: 800, stock: 25, category: "Accessories" },
+  { name: "Router", price: 2500, stock: 6, category: "Networking" }
+]
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Expected Output</div>
+                <div class="output-block">
+Low Stock Items:
+Printer - Office - 4
+Router - Networking - 6
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 4 -->
+        <div class="problem-card">
+            <h2 class="problem-title"><span class="problem-number">4</span>Library Penalty Calculator</h2>
+
+            <div class="section">
+                <div class="section-title">Problem</div>
+                <div class="content">
+                    Create a function that calculates fine based on overdue days and membership type. Premium users get a smaller fine than regular users.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Constraints</div>
+                <ul class="constraints-list">
+                    <li>Overdue days must be 0 or more</li>
+                    <li><strong>Regular user fine:</strong>
+                        <ul>
+                            <li>1 to 5 days: ₹10/day</li>
+                            <li>6 to 10 days: ₹20/day</li>
+                            <li>above 10 days: ₹50/day</li>
+                        </ul>
+                    </li>
+                    <li><strong>Premium user fine:</strong>
+                        <ul>
+                            <li>1 to 5 days: ₹5/day</li>
+                            <li>6 to 10 days: ₹10/day</li>
+                            <li>above 10 days: ₹25/day</li>
+                        </ul>
+                    </li>
+                    <li>Use a function and conditions</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Sample Input</div>
+                <div class="code-block">
+Days: 8
+User Type: Premium
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Expected Output</div>
+                <div class="output-block">
+Late Days: 8
+User Type: Premium
+Fine: 80
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 5 -->
+        <div class="problem-card">
+            <h2 class="problem-title"><span class="problem-number">5</span>Result Card Renderer</h2>
+
+            <div class="section">
+                <div class="section-title">Problem</div>
+                <div class="content">
+                    Store student marks in an object, calculate total, average, highest subject, and pass/fail status. Display the complete report in the webpage using DOM.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Constraints</div>
+                <ul class="constraints-list">
+                    <li>Use exactly 3 subjects</li>
+                    <li>Marks must be between 0 and 100</li>
+                    <li>Pass only if all subjects are 40 or above</li>
+                    <li>Show highest scoring subject</li>
+                    <li>Use object, function, and DOM update</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Sample Input</div>
+                <div class="code-block">
+Name: Arjun
+Math: 91
+Science: 74
+English: 63
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Expected Output</div>
+                <div class="output-block">
+Student Name: Arjun
+Total: 228
+Average: 76
+Highest Subject: Math
+Result: Pass
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
